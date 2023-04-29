@@ -1,9 +1,19 @@
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+
 import './App.css'
+import IndexPages from './pages/IndexPages'
+import LoginPages from './pages/LoginPages'
 
 function App() {
   return (
-    <div className="bg-red-500">Test</div>
-  )
+    <div>
+        <Routes>
+          <Route index element={<IndexPages />} />
+          <Route path="/login" element={<LoginPages />} />
+        </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
